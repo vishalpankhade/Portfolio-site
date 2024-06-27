@@ -524,7 +524,7 @@ article .icon {
 }
 
 .first-iframe {
-  min-width: 30vw;
+  min-width: 90%;
   min-height: 70vh;
   border-radius: 5%;
 }
