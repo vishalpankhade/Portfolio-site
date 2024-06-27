@@ -24,8 +24,8 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <div class="darkmode-btn"></div>
-        <input type="checkbox" id="toggle-1" class="toggle" />
-        <label for="toggle-1" onclick="toggleDarkMode()"></label>
+        <input type="checkbox" id="toggle-1" class="toggle" onclick="toggleDarkMode()"/>
+        <label for="toggle-1" onclick="toggleDarkMode()" ></label>
     </div>
     </div>
     </ul>
@@ -95,22 +95,24 @@
           <div class="details-container">
             <img src="./assets/experience.svg" alt="Experience icon" class="icon" />
             <h3>Experience</h3>
-            <p>1+ years <br />Frontend Development</p>
+            <p class="p-off-hover">1+ years <br />Frontend Development, <br>
+            </p>
+            <p class="display-non-on-s-width p-off-hover"> creating responsive & <br> interactive web projects.</p>
+            <p class="p-on-hover">specializing in HTML, CSS, and JS. Developed and deployed projects using modern framework React.</p>
           </div>
           <div class="details-container">
             <img src="./assets/education.png" alt="Education icon" class="icon" />
             <h3>Education</h3>
-            <p>BCA 3rd year <br />Self Taught <br>Front-end Developer</p>
+            <p class="p-off-hover">BCA 3rd year <br />Self Taught <br>Front-end Developer</p>
+            <p class="p-on-hover">Bachelor of Computer Applications (BCA) <br>
+              UTTARANCHAL UNIVERSITY <br>
+              2023 - 2026
+              </p>
           </div>
         </div>
         <div class="text-container">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-            reprehenderit et laborum, rem, dolore eum quod voluptate
-            exercitationem nobis, nihil esse debitis maxime facere minus sint
-            delectus velit in eos quo officiis explicabo deleniti dignissimos.
-            Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-            reiciendis ea magnam? Nulla, impedit fuga!
+            Hello! I'm Vishal Pankhade, a passionate Web Developer currently pursuing a Bachelor's in Computer Applications (BCA). My journey into tech was driven by a deep curiosity and a desire to create. I've honed my skills in HTML, CSS, and JavaScript, and I'm currently learning React. I thrive on continuous learning and am excited to contribute my knowledge and creativity to innovative web projects.
           </p>
         </div>
       </div>
@@ -142,6 +144,13 @@
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
+                <h3>Tailwind</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
                 <h3>Git</h3>
                 <p>Intermediate</p>
               </div>
@@ -150,14 +159,14 @@
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>JavaScript</h3>
-                <p>Basic</p>
+                <p>Intermediate</p>
               </div>
             </article>
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>Node JS</h3>
-                <p>Intermediate</p>
+                <p>Basic</p>
               </div>
             </article>
             <article>
@@ -165,7 +174,7 @@
                 <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>React</h3>
-                  <p>Intermediate</p>
+                  <p>Basic</p>
                 </div>
               </article>
           </div>
@@ -212,12 +221,17 @@
             <!-- <img src="./assets/project-1.png" alt="Project 1" class="project-img" /> -->
             <iframe loading="lazy" class="first-iframe" src="https://india-isro.netlify.app/" frameborder="0"></iframe>
           </div>
-          <h2 class="experience-sub-title project-title">Project One</h2>
+          <h2 class="experience-sub-title project-title">Redesign ISRO Project</h2>
+          <p class="project-disc">I took inspiration from this <a target="_blank"
+              href="https://drive.google.com/file/d/13zsxDiUJsZ2g3QZ9ml58ICL7gTelOl7s/view?usp=drive_link">
+              video
+            </a> and made this site from scratch using HTML CSS JS</p>
           <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/vishalpankhade/Redesgin-ISRO-site-project'">
               Github
             </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://india-isro.netlify.app/'">
               Live Demo
             </button>
           </div>
@@ -251,9 +265,10 @@
           </div>
         </div>
       </div>
+      <!-- add projects page link here  -->
+      <a href="https://www.frontendmentor.io/profile/vishalpankhade" target="_blank">
+      <button class="glow-on-hover"> See More Projects</button></a>
     </div>
-    <!-- add projects page link here  -->
-    <button class="glow-on-hover">See More Projects</button>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
   </section>
   <section id="contact">

@@ -423,7 +423,33 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  min-height: 35vh;  
+}
 
+.details-container h3 {
+  margin-bottom: 5%;
+}
+
+.details-container .p-off-hover {
+  display: inline;
+  animation: fadeIn 2s;
+}
+.details-container .p-on-hover{
+  display: none;
+  animation: fadeIn 2s;
+}
+.details-container:hover .p-off-hover {
+  display: none;
+  animation: fadeIn 2s;
+}
+.details-container:hover .p-on-hover{
+  display: inline;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .section-container {
@@ -497,20 +523,27 @@ article .icon {
   margin: 1rem;
 }
 
+.first-iframe {
+  min-width: 30vw;
+  min-height: 70vh;
+  border-radius: 5%;
+}
+
+.project-disc {
+  font-size: .9em;
+  max-width: 90%;
+  margin: 0 auto 1em;
+}
+
 .project-btn {
   /* color: black; */
   border-color: rgb(163, 163, 163);
 }
 
-.first-iframe {
-  width: 30vw;
-  height: 70vh;
-  border-radius: 5%;
-}
-
 /* More projects btn */
 
 .glow-on-hover {
+  margin-top: 5%;
   width: 220px;
   height: 50px;
   border: none;

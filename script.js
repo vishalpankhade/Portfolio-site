@@ -6,6 +6,8 @@ function initLocomotiveScroll() {
   });
 }
 
+setTimeout()
+
 initLocomotiveScroll();
 
 function toggleDarkMode() {
@@ -19,7 +21,7 @@ function toggleDarkMode() {
 
   const contInfo = document.querySelectorAll(".contact-info-upper-container");
 
-  const hamburgerIconDiv = document.querySelector(".hamburger-icon");
+  // const hamburgerIconDiv = document.querySelector(".hamburger-icon");
 
   const hamburgerSpan = document.querySelectorAll("span");
 
@@ -100,5 +102,3 @@ function toggleMenu() {
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 }
-
-
