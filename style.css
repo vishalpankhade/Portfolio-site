@@ -178,6 +178,13 @@ a:hover {
   font-size: 2rem;
 }
 
+.logo a:hover {
+  color: #D38451;
+  text-decoration: unset;
+  text-underline-offset: unset;
+  text-decoration-color: none;
+}
+
 .logo:hover {
   cursor: default;
 }
@@ -423,7 +430,7 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
-  min-height: 35vh;  
+  min-height: 35vh;
 }
 
 .details-container h3 {
@@ -434,22 +441,30 @@ section {
   display: inline;
   animation: fadeIn 2s;
 }
-.details-container .p-on-hover{
+
+.details-container .p-on-hover {
   display: none;
   animation: fadeIn 2s;
 }
+
 .details-container:hover .p-off-hover {
   display: none;
   animation: fadeIn 2s;
 }
-.details-container:hover .p-on-hover{
+
+.details-container:hover .p-on-hover {
   display: inline;
   animation: fadeIn 2s;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .section-container {
@@ -665,8 +680,18 @@ article .icon {
 footer {
   height: 26vh;
   margin: 0 1rem;
+  position: relative;
 }
 
 footer p {
   text-align: center;
+}
+
+.go-to-top {
+  position: fixed;
+  right: 5%;
+  bottom: 1%;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
 }

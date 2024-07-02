@@ -15,20 +15,21 @@
 </head>
 
 <body data-scroll-container>
-  <nav id="desktop-nav">
-    <div class="logo">VISHAL</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <div class="darkmode-btn"></div>
-        <input type="checkbox" id="toggle-1" class="toggle" />
-        <label for="toggle-1" onclick="toggleDarkMode()" ></label>
-    </div>
-    </div>
-    </ul>
+  <div class="main-container">
+
+    <nav id="desktop-nav">
+      <div class="logo"><a href="#Vishal">VISHAL</a></div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <input type="checkbox" id="toggle-1" class="toggle" />
+          <label for="toggle-1" onclick="toggleDarkMode()"></label>
+      </div>
+  </div>
+  </ul>
   </nav>
   <nav id="hamburger-nav">
     <div class="logo">VISHAL</div>
@@ -98,7 +99,8 @@
             <p class="p-off-hover">1+ years <br />Frontend Development, <br>
             </p>
             <p class="display-non-on-s-width p-off-hover"> creating responsive & <br> interactive web projects.</p>
-            <p class="p-on-hover">specializing in HTML, CSS, and JS. Developed and deployed projects using modern framework React.</p>
+            <p class="p-on-hover">specializing in HTML, CSS, and JS. Developed and deployed projects using modern
+              framework React.</p>
           </div>
           <div class="details-container">
             <img src="./assets/education.png" alt="Education icon" class="icon" />
@@ -107,12 +109,15 @@
             <p class="p-on-hover">Bachelor of Computer Applications (BCA) <br>
               UTTARANCHAL UNIVERSITY <br>
               2023 - 2026
-              </p>
+            </p>
           </div>
         </div>
         <div class="text-container">
           <p>
-            Hello! I'm Vishal Pankhade, a passionate Web Developer currently pursuing a Bachelor's in Computer Applications (BCA). My journey into tech was driven by a deep curiosity and a desire to create. I've honed my skills in HTML, CSS, and JavaScript, and I'm currently learning React. I thrive on continuous learning and am excited to contribute my knowledge and creativity to innovative web projects.
+            Hello! I'm Vishal Pankhade, a passionate Web Developer currently pursuing a Bachelor's in Computer
+            Applications (BCA). My journey into tech was driven by a deep curiosity and a desire to create. I've honed
+            my skills in HTML, CSS, and JavaScript, and I'm currently learning React. I thrive on continuous learning
+            and am excited to contribute my knowledge and creativity to innovative web projects.
           </p>
         </div>
       </div>
@@ -267,7 +272,7 @@
       </div>
       <!-- add projects page link here  -->
       <a href="https://www.frontendmentor.io/profile/vishalpankhade" target="_blank">
-      <button class="glow-on-hover"> See More Projects</button></a>
+        <button class="glow-on-hover"> See More Projects</button></a>
     </div>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
   </section>
@@ -301,7 +306,11 @@
       </div>
     </nav>
     <p>Copyright &#169; 2023 Vishal Pankhade. All Rights Reserved.</p>
+    <img src="assets/UParrow.png" alt="go-to-top" class="go-to-top arrow" id="goToTopButton"
+      onclick="location.href='./#Vishal'">
   </footer>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
   <script src="script.js"></script>
 </body>

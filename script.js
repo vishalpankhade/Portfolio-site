@@ -6,8 +6,6 @@ function initLocomotiveScroll() {
   });
 }
 
-setTimeout()
-
 initLocomotiveScroll();
 
 function toggleDarkMode() {
@@ -20,8 +18,6 @@ function toggleDarkMode() {
   const container = document.querySelectorAll(".details-container");
 
   const contInfo = document.querySelectorAll(".contact-info-upper-container");
-
-  // const hamburgerIconDiv = document.querySelector(".hamburger-icon");
 
   const hamburgerSpan = document.querySelectorAll("span");
 
