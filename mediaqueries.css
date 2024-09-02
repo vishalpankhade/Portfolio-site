@@ -1,3 +1,21 @@
+@media screen and (min-width: 1400px) {
+  section {
+    height: unset;
+  }
+
+  #contact {
+    height: 35vh;
+  }
+
+  #experience {
+    padding-top: 10vh;
+  }
+
+  .about-containers {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -31,28 +49,41 @@
 
   /* toggle-switch */
 
+  input[type="checkbox"].toggle+label {
+    cursor: unset;
+  }
+
 
   input[type="checkbox"].toggle+label::after {
-    content: "\2600";
+    content: "";
     font-size: 1em;
     width: 1.4rem;
     height: 1.4rem;
     left: 3.7px;
   }
-  
-  
+
+
   input[type="checkbox"].toggle+label::before {
     width: 1.9rem;
     height: 1.9rem;
     border-radius: .9rem;
   }
 
+  .switch-btn {
+    position: relative;
+    left: -30px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .switch-btn:hover {
+    filter: brightness(0) saturate(100%) invert(98%) sepia(79%) saturate(6102%) hue-rotate(310deg) brightness(96%) contrast(84%);
+  }
+
   /* toggle-switch-end */
 
   .menu-links {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10rem;
+    top: 50%
   }
 
   .menu-links a {
@@ -95,6 +126,13 @@
 }
 
 @media screen and (max-width: 600px) {
+
+  .menu-links {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10rem;
+    top: 90%;
+  }
 
   #contact,
   footer {
@@ -165,4 +203,10 @@
   .display-non-on-s-width {
     display: none !important;
   }
+
+  .hamburger-icon {
+    height: 20px;
+    width: 25px;
+    margin-top: 4px;
+}
 }

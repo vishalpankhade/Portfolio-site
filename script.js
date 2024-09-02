@@ -1,5 +1,5 @@
 function initLocomotiveScroll() {
-  return new LocomotiveScroll({
+  scroll = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true,
     multiplier: 0.8,
@@ -24,11 +24,17 @@ function toggleDarkMode() {
   const darkIcon = document.querySelectorAll(".icon");
 
   const checkbox = document.querySelector("#toggle-1");
+  
+  const switchImgBtn = document.querySelectorAll(".switch-btn");
 
   const body = document.body;
 
   if (checkbox.checked) {
     body.classList.remove("dark-mode");
+
+    switchImgBtn.forEach((img) =>{
+      img.src = img.getAttribute('src-light');
+    })
 
     ancorTags.forEach((anchor) => {
       anchor.classList.remove("white");
@@ -61,6 +67,10 @@ function toggleDarkMode() {
   } else {
     body.classList.add("dark-mode");
 
+    switchImgBtn.forEach((img) =>{
+      img.src = img.getAttribute('src-dark');
+    })
+
     ancorTags.forEach((anchor) => {
       anchor.classList.add("white");
     });
@@ -92,9 +102,32 @@ function toggleDarkMode() {
   }
 }
 
-function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
+// function toggleMenu() {
+
+// }
+
+const menu = document.querySelector(".menu-links");
+const icon = document.querySelector(".hamburger-icon");
+
+icon.addEventListener('click', (e) =>{
+  e.stopPropagation()
   icon.classList.toggle("open");
-}
+  menu.classList.toggle("open");
+})
+
+window.addEventListener('click', (e) =>{
+  e.stopPropagation()
+  icon.classList.remove("open");
+  menu.classList.remove("open");
+})
+
+document.querySelector("#goToTopButton").addEventListener("click", () => {
+  // Using Locomotive Scroll's scrollTo method to scroll to the top
+  scroll.scrollTo(0);
+
+  setTimeout(() => {
+    location.reload();
+  }, 2500);
+});
+
+
