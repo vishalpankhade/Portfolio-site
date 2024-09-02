@@ -24,11 +24,17 @@ function toggleDarkMode() {
   const darkIcon = document.querySelectorAll(".icon");
 
   const checkbox = document.querySelector("#toggle-1");
+  
+  const switchImgBtn = document.querySelectorAll(".switch-btn");
 
   const body = document.body;
 
   if (checkbox.checked) {
     body.classList.remove("dark-mode");
+
+    switchImgBtn.forEach((img) =>{
+      img.src = img.getAttribute('src-light');
+    })
 
     ancorTags.forEach((anchor) => {
       anchor.classList.remove("white");
@@ -60,6 +66,10 @@ function toggleDarkMode() {
     });
   } else {
     body.classList.add("dark-mode");
+
+    switchImgBtn.forEach((img) =>{
+      img.src = img.getAttribute('src-dark');
+    })
 
     ancorTags.forEach((anchor) => {
       anchor.classList.add("white");
