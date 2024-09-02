@@ -1,5 +1,5 @@
 function initLocomotiveScroll() {
-  return new LocomotiveScroll({
+  scroll = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true,
     multiplier: 0.8,
@@ -92,9 +92,32 @@ function toggleDarkMode() {
   }
 }
 
-function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
+// function toggleMenu() {
+
+// }
+
+const menu = document.querySelector(".menu-links");
+const icon = document.querySelector(".hamburger-icon");
+
+icon.addEventListener('click', (e) =>{
+  e.stopPropagation()
   icon.classList.toggle("open");
-}
+  menu.classList.toggle("open");
+})
+
+window.addEventListener('click', (e) =>{
+  e.stopPropagation()
+  icon.classList.remove("open");
+  menu.classList.remove("open");
+})
+
+document.querySelector("#goToTopButton").addEventListener("click", () => {
+  // Using Locomotive Scroll's scrollTo method to scroll to the top
+  scroll.scrollTo(0);
+
+  setTimeout(() => {
+    location.reload();
+  }, 2500);
+});
+
+

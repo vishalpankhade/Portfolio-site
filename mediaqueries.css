@@ -1,3 +1,21 @@
+@media screen and (min-width: 1400px) {
+  section {
+    height: unset;
+  }
+
+  #contact {
+    height: 35vh;
+  }
+
+  #experience {
+    padding-top: 10vh;
+  }
+
+  .about-containers {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -39,8 +57,8 @@
     height: 1.4rem;
     left: 3.7px;
   }
-  
-  
+
+
   input[type="checkbox"].toggle+label::before {
     width: 1.9rem;
     height: 1.9rem;
@@ -50,9 +68,7 @@
   /* toggle-switch-end */
 
   .menu-links {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10rem;
+    top: 50%
   }
 
   .menu-links a {
@@ -95,6 +111,13 @@
 }
 
 @media screen and (max-width: 600px) {
+
+  .menu-links {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10rem;
+    top: 90%;
+  }
 
   #contact,
   footer {
