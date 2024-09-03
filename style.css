@@ -550,6 +550,15 @@ article .icon {
   margin: 0 auto 1em;
 }
 
+a#project-video {
+  color: #00ffda !important;
+  text-decoration: none;
+}
+
+a#project-video:hover {
+  color: brown !important;
+}
+
 .project-btn {
   /* color: black; */
   border-color: rgb(163, 163, 163);
