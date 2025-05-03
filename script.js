@@ -1,12 +1,12 @@
-// function initLocomotiveScroll() {
-//   scroll = new LocomotiveScroll({
-//     el: document.querySelector("[data-scroll-container]"),
-//     smooth: true,
-//     multiplier: 0.8,
-//   });
-// }
+function initLocomotiveScroll() {
+  scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    multiplier: 0.8,
+  });
+}
 
-// initLocomotiveScroll();
+initLocomotiveScroll();
 
 // Function to load the theme from localStorage
 function loadTheme() {
@@ -146,7 +146,7 @@ document.querySelector("#goToTopButton").addEventListener("click", () => {
   // Using Locomotive Scroll's scrollTo method to scroll to the top
   scroll.scrollTo(0);
 
-  setTimeout(() => {
-    location.reload();
-  }, 2500);
+  // setTimeout(() => {
+  //   location.reload();
+  // }, 2500);
 });
