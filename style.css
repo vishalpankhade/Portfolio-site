@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.c-scrollbar {
+  display: none !important;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }

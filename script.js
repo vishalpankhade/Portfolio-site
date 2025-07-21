@@ -1,16 +1,27 @@
-// function initLocomotiveScroll() {
-//   scroll = new LocomotiveScroll({
-//     el: document.querySelector("[data-scroll-container]"),
-//     smooth: true,
-//     multiplier: 0.8,
-//   });
-// }
+function initLocomotiveScroll() {
+  scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    multiplier: 0.8,
+  });
+}
 
-// initLocomotiveScroll();
+initLocomotiveScroll();
 
-// Function to load the theme from localStorage
+// Smooth scroll to section on nav link click
+document.querySelectorAll("[data-target]").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetSelector = link.getAttribute("data-target");
+    const target = document.querySelector(targetSelector);
+    if (target) {
+      scroll.scrollTo(target);
+    }
+  });
+});
+
 function loadTheme() {
-  const theme = localStorage.getItem("theme") || {};
+  const theme = localStorage.getItem("theme");
   const checkbox = document.querySelector("#toggle-1");
 
   if (theme === "dark") {
@@ -19,11 +30,13 @@ function loadTheme() {
     addDark();
   } else {
     checkbox.checked = false;
+    document.body.classList.remove("dark-mode");
+    removeDark(); // Optional if you want to reset to light styles
   }
 }
 
 // Load the theme when the page loads
-window.onload = loadTheme;
+window.addEventListener("DOMContentLoaded", loadTheme);
 
 const ancorTags = document.querySelectorAll("a");
 
@@ -146,7 +159,11 @@ document.querySelector("#goToTopButton").addEventListener("click", () => {
   // Using Locomotive Scroll's scrollTo method to scroll to the top
   scroll.scrollTo(0);
 
-  setTimeout(() => {
-    location.reload();
-  }, 2500);
+  // setTimeout(() => {
+  //   location.reload();
+  // }, 2500);
+});
+
+window.addEventListener("load", () => {
+  scroll.update();
 });
