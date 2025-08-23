@@ -167,3 +167,11 @@ document.querySelector("#goToTopButton").addEventListener("click", () => {
 window.addEventListener("load", () => {
   scroll.update();
 });
+
+
+function loadIframe(img) {
+  const iframe = img.nextElementSibling;
+  iframe.src = iframe.dataset.src;   // load iframe only on click
+  iframe.style.display = "block";
+  img.style.display = "none";
+}
